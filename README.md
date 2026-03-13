@@ -35,18 +35,26 @@ g++ -std=c++17 -O2 -o ntas src/*.cpp -Iinclude
 
 解压程序压缩包，目录结构如下：
 
-```
-网安2402-U202XXXXXX-姓名/
-├── 可执行程序/
-│   ├── ntas.exe               ← C程序主体（已编译）
-│   ├── py_gui.py              ← 图形界面启动脚本
-│   ├── visualize_subgraph.py  ← 子图可视化脚本
-│   ├── pcap_to_csv.py         ← pcap格式转换脚本
-│   └── data/
-│       └── network_data.csv   ← 示例数据文件
-└── 源代码/
-    └── ...
-```
+项目根目录/
+├── src/
+│   ├── main.cpp
+│   ├── csv_reader.cpp
+│   ├── graph.cpp
+│   ├── analyzer.cpp
+│   └── union_find.cpp
+├── include/
+│   ├── csv_reader.h
+│   ├── graph.h
+│   ├── analyzer.h
+│   ├── union_find.h
+│   └── types.h
+├── data/
+│   └── network_data.csv      ← 示例数据文件
+├── py_gui.py                 ← 图形界面启动脚本
+├── visualize_subgraph.py     ← 子图可视化脚本
+├── pcap_to_csv.py            ← pcap格式转换脚本
+├── ntas.exe                  ← 编译好的可执行文件（Windows）
+└── README.md
 
 **步骤2：安装 Python 依赖库**
 
